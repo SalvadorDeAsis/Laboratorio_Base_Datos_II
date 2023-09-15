@@ -1,0 +1,20 @@
+Base de datos de la Tienda de Computacion
+
+Roles:
+
+Rol: Administrador
+Rol: Personal de ventas
+Rol: Técnico en informática:
+rol: Asistente técnico:
+rol: Administrador financiero
+
+opciones: 
+- insertar : Insert
+- modificar : Update
+- consultas : Select
+- eliminar : Delete
+
+Este no es mi proyecto de desarrollo.
+
+
+
