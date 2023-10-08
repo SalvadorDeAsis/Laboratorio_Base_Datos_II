@@ -9,31 +9,31 @@ CREATE TABLE Productos (
   Precio DECIMAL(10, 2) NOT NULL,
   Existencia INT NOT NULL
 );
-
--- Tabla Direcciones
-CREATE TABLE Distrito (
-  ID_Distrito INT PRIMARY KEY IDENTITY(1,1),
-  NombreDistrito NVARCHAR(45) NOT NULL
+create table Departamentos(
+	ID_Departamento char(2) primary key,
+	Departamento varchar(60) not null,
+	Pais varchar(60)
 );
 
-CREATE TABLE Direcciones (
-  ID_Direccion INT PRIMARY KEY IDENTITY(1,1),
-  NumeroCasa NVARCHAR(10),
-  PasajePoligono NVARCHAR(10),
-  Calle NVARCHAR(45),
-  Colonia NVARCHAR(45),
-  Canton NVARCHAR(45),
-  Caserio NVARCHAR(45),
-  Municipio NVARCHAR(45) NOT NULL,
-  Departamento NVARCHAR(45) NOT NULL,
-  CodigoPostal CHAR(5),
-  Pais NVARCHAR(45) NOT NULL,
-  ID_Distrito INT NOT NULL
-  FOREIGN KEY (ID_Distrito) REFERENCES Distrito(ID_Distrito) ON DELETE CASCADE ON UPDATE CASCADE
-
+create table Municipios(
+	ID_Municipio char(3) primary key,
+	Municipio varchar(60) not null,
+	ID_Departamento char(2) not null
 );
-
--- Tabla Distrito
+go
+create table Distritos(
+	ID_Distrito varchar(5) primary key,
+	Distrito varchar(60) not null,
+	ID_Municipio char(3) not null
+);
+go
+create table Direcciones(
+	ID_Direccion int primary key identity(1, 1),
+    Linea1 varchar(100) not null,
+    Linea2 varchar(100),
+    ID_Distrito varchar(5) not null,
+    CodigoPostal int,
+);
 
 -- Tabla Clientes
 CREATE TABLE Clientes (
@@ -142,3 +142,7 @@ CREATE TABLE Usuarios(
 	FOREIGN KEY  (ID_Rol) REFERENCES Roles(ID_Rol) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY  (ID_Empleado) REFERENCES Empleados(ID_Empleado) ON DELETE CASCADE ON UPDATE CASCADE,
 );
+
+alter table Municipios add foreign key (ID_Departamento) references Departamentos(ID_Departamento);
+alter table Distritos add foreign key (ID_Municipio) references Municipios(ID_Municipio);
+alter table Direcciones add foreign key (ID_Distrito) references Distritos(ID_Distrito);

@@ -404,7 +404,36 @@ VALUES('María','González','667899','MariaGon23@yahoo.com',4);
 INSERT INTO Clientes(NombresCliente,ApellidosCliente,
 TelefonoCliente,EmailCliente,ID_Direccion)
 VALUES('Carlos','Rodríguez','757677','Carloguez2023@gmail.com',2);
+-- INSERT CARGOS
 
+INSERT INTO Cargo(Cargo) VALUES('Jefe');
+INSERT INTO Cargo(Cargo) VALUES ('Empleado')
+
+SELECT * FROM Cargo;
+
+-- Insert Empledos
+
+INSERT INTO Empleados(Dui_Empleado,ISSS_Empleado,NombresEmpleado,
+ApellidosEmpleado,FechaNacEmpledo,Telefeno,Correo,ID_Cargo,ID_Direccion)
+VALUES('03445233-3','2345134245','Morgan Alex',
+'Diaz Flores','1995-02-01','677-555','morgandiaz@gmail.com',1,2);
+
+INSERT INTO Empleados(Dui_Empleado,ISSS_Empleado,NombresEmpleado,
+ApellidosEmpleado,FechaNacEmpledo,Telefeno,Correo,ID_Cargo,ID_Direccion)
+VALUES('33345233-6','6345134246','Sandra Elie',
+'Gonzales Lopez','1993-05-23','677-555','sandra@gmail.com',2,4);
+
+INSERT INTO Empleados(Dui_Empleado,ISSS_Empleado,NombresEmpleado,
+ApellidosEmpleado,FechaNacEmpledo,Telefeno,Correo,ID_Cargo,ID_Direccion)
+VALUES('33345233-6','6345134246','Pedro Alberto',
+'Lopez Martinez','1996-09-07','787-565','pedro@gmail.com',2,3);
+
+INSERT INTO Empleados(Dui_Empleado,ISSS_Empleado,NombresEmpleado,
+ApellidosEmpleado,FechaNacEmpledo,Telefeno,Correo,ID_Cargo,ID_Direccion)
+VALUES('33345233-6','6345134246','Alex Paco',
+'Salinas Martinez','1997-04-13','656-664','alex@gmail.com',2,5);
+
+SELECT * FROM Empleados;
 
 -- INSERT COMPRAS
 
@@ -424,39 +453,18 @@ INSERT INTO Compras (FechaCompra, MontoCompra, ID_Cliente)
 VALUES ('2023-07-04', 300.00, 4);
 
 
-select * from DetallePedidos;
 
 
-INSERT INTO Pedidos (FechaPedido, MontoPedido, ID_Proveedor)
-VALUES ('2023-07-01', 1500.00, 1);
 
--- Inserción 2
-INSERT INTO Pedidos (FechaPedido, MontoPedido, ID_Proveedor)
-VALUES ('2023-07-02', 2500.00, 1);
+-- INSERT INTO Pedidos (FechaPedido, MontoPedido, ID_Proveedor)
+-- VALUES ('2023-07-01', 1500.00, 1);
 
--- Inserción 3
-INSERT INTO Pedidos (FechaPedido, MontoPedido, ID_Proveedor)
-VALUES ('2023-07-03', 1800.00, 2);
 
--- Inserción 4
-INSERT INTO Pedidos (FechaPedido, MontoPedido, ID_Proveedor)
-VALUES ('2023-07-04', 1200.00, 2);
 
 --INSERT DETALLEPEDIDO
-INSERT INTO DetallePedidos (CantidadProductos, ID_Pedido, ID_Producto)
-VALUES (3, 1, 1);
+-- INSERT INTO DetallePedidos (CantidadProductos, ID_Pedido, ID_Producto)
+-- VALUES (3, 1, 1);
 
--- Inserción 2
-INSERT INTO DetallePedidos (CantidadProductos, ID_Pedido, ID_Producto)
-VALUES (5, 2, 2);
-
--- Inserción 3
-INSERT INTO DetallePedidos (CantidadProductos, ID_Pedido, ID_Producto)
-VALUES (2, 3, 3);
-
--- Inserción 4
-INSERT INTO DetallePedidos (CantidadProductos, ID_Pedido, ID_Producto)
-VALUES (4, 4, 4);
 
 
 

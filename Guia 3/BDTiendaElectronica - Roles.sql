@@ -47,13 +47,13 @@ go
 insert into Usuarios values
 	-- ID_Empleado, ID_Rol, Usuario, Clave
 	-- Administrador
-	('2', '1', 'admin_Gordon', 'root'),
+	('1', '1', 'admin_Gordon', 'root'),
 	-- Personal de ventas
-	('3', '2', 'PV_Max', 'max1234'),
+	('2', '2', 'PV_Max', 'max1234'),
 	-- Técnico en informática
-	('4', '3', 'Tec_Inf_Alan', 'alan1234'),
+	('3', '3', 'Tec_Inf_Alan', 'alan1234'),
 	-- RRHH
-	('5', '4', 'Ast_Tec_Erick', 'erick1234');
+	('4', '4', 'Ast_Tec_Erick', 'erick1234');
 go
 
 select * from Usuarios;
