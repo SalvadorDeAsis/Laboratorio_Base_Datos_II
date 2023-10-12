@@ -82,9 +82,10 @@ CREATE TABLE DetallePedidos (
 );
 
 -- Tabla DetalleCompras
-CREATE TABLE DetalleCompras (
-  ID_DetalleCompra INT NOT NULL,
+CREATE TABLE  DetalleCompras (
+  ID_DetalleCompra INT IDENTITY(1,1)NOT NULL,
   CantidadProductos INT NOT NULL,
+  SubTotal decimal (10, 2),
   ID_Producto INT NOT NULL,
   ID_Compra INT NOT NULL,
   PRIMARY KEY (ID_DetalleCompra, ID_Producto, ID_Compra),
@@ -142,7 +143,6 @@ CREATE TABLE Usuarios(
 	FOREIGN KEY  (ID_Rol) REFERENCES Roles(ID_Rol) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY  (ID_Empleado) REFERENCES Empleados(ID_Empleado) ON DELETE CASCADE ON UPDATE CASCADE,
 );
-
 alter table Municipios add foreign key (ID_Departamento) references Departamentos(ID_Departamento);
 alter table Distritos add foreign key (ID_Municipio) references Municipios(ID_Municipio);
 alter table Direcciones add foreign key (ID_Distrito) references Distritos(ID_Distrito);

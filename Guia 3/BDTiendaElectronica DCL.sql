@@ -50,8 +50,11 @@ alter role Asistente_Tecnico add member Ast_Tec_Alex;
 go
 -- Administrador
 grant control on database::Tienda_electronica to SysAdmin;
-
-
+-- Personal Ventas
+grant select, insert, update on database::Tienda_electronica to Personal_Ventas;
+-- Tecnico_Informatica
+grant select on database::Tienda_electronica to Personal_Ventas;
+-- Asistente_Tecnico - Sin permiso
 
 
 -- Consulta para obtener una lista de logins en la instancia de SQL Server
