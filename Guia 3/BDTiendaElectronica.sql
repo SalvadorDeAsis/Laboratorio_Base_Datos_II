@@ -1,6 +1,6 @@
-create database Tienda_electronica;
+create database TiendaElectronica;
 go 
-use Tienda_electronica;
+use TiendaElectronica;
 go 
 -- Tabla Productos
 CREATE TABLE Productos (
@@ -97,22 +97,21 @@ Create table Cargo(
 	Cargo VARCHAR(MAX) NOT NULL
 );
 
-Create table Empleados(
+create table Empleados(
 	ID_Empleado INT PRIMARY KEY IDENTITY(1,1),
-	Dui_Empleado VARCHAR(10)NOT NULL,
-	ISSS_Empleado VARCHAR(10)NOT NULL,
+	DUI_Empleado VARCHAR(10)NOT NULL,
+	ISSS_Empleado int NOT NULL,
 	NombresEmpleado VARCHAR(50)NOT NULL,
 	ApellidosEmpleado VARCHAR(50)NOT NULL,
-	FechaNacEmpledo DATE NOT NULL,
-	Telefeno VARCHAR(20)NOT NULL,
-	Correo VARCHAR(50)NOT NULL,
+	FechaNacEmpleado DATE NOT NULL,
+	Telefono VARCHAR(10)NOT NULL,
+	Correo VARCHAR(100)NOT NULL,
 	ID_Cargo INT NOT NULL,
 	ID_Direccion INT NOT NULL
 
 	FOREIGN KEY  (ID_Direccion) REFERENCES Direcciones(ID_Direccion) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY  (ID_Cargo) REFERENCES Cargo(ID_Cargo) ON DELETE CASCADE ON UPDATE CASCADE,
 );
-
 CREATE TABLE Opciones(
 	ID_Opcion INT PRIMARY KEY IDENTITY(1,1),
 	Opcion VARCHAR(MAX) NOT NULL

@@ -1,3 +1,7 @@
+go
+use TiendaElectronica;
+go 
+
 --INSERT PRODUCTOS
 INSERT INTO Productos (Descripcion, Precio, Existencia) VALUES ('Laptos Core i5 6th', 459.99, 10);
 INSERT INTO Productos (Descripcion, Precio, Existencia) VALUES ('Disco duro 1TB', 89.99, 40);
@@ -414,23 +418,23 @@ SELECT * FROM Cargo;
 -- Insert Empledos
 
 INSERT INTO Empleados(Dui_Empleado,ISSS_Empleado,NombresEmpleado,
-ApellidosEmpleado,FechaNacEmpledo,Telefeno,Correo,ID_Cargo,ID_Direccion)
-VALUES('03445233-3','2345134245','Morgan Alex',
+ApellidosEmpleado,FechaNacEmpleado,Telefono,Correo,ID_Cargo,ID_Direccion)
+VALUES('03445233-3',12345646,'Morgan Alex',
 'Diaz Flores','1995-02-01','677-555','morgandiaz@gmail.com',1,2);
 
 INSERT INTO Empleados(Dui_Empleado,ISSS_Empleado,NombresEmpleado,
-ApellidosEmpleado,FechaNacEmpledo,Telefeno,Correo,ID_Cargo,ID_Direccion)
-VALUES('33345233-6','6345134246','Sandra Elie',
+ApellidosEmpleado,FechaNacEmpleado,Telefono,Correo,ID_Cargo,ID_Direccion)
+VALUES('33345233-6',52345646,'Sandra Elie',
 'Gonzales Lopez','1993-05-23','677-555','sandra@gmail.com',2,4);
 
 INSERT INTO Empleados(Dui_Empleado,ISSS_Empleado,NombresEmpleado,
-ApellidosEmpleado,FechaNacEmpledo,Telefeno,Correo,ID_Cargo,ID_Direccion)
-VALUES('33345233-6','6345134246','Pedro Alberto',
+ApellidosEmpleado,FechaNacEmpleado,Telefono,Correo,ID_Cargo,ID_Direccion)
+VALUES('33345233-6',82745646,'Pedro Alberto',
 'Lopez Martinez','1996-09-07','787-565','pedro@gmail.com',2,3);
 
 INSERT INTO Empleados(Dui_Empleado,ISSS_Empleado,NombresEmpleado,
-ApellidosEmpleado,FechaNacEmpledo,Telefeno,Correo,ID_Cargo,ID_Direccion)
-VALUES('33345233-6','6345134246','Alex Paco',
+ApellidosEmpleado,FechaNacEmpleado,Telefono,Correo,ID_Cargo,ID_Direccion)
+VALUES('33345233-6',45134246,'Alex Paco',
 'Salinas Martinez','1997-04-13','656-664','alex@gmail.com',2,5);
 
 SELECT * FROM Empleados;
